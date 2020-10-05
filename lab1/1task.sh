@@ -2,7 +2,7 @@
 
 let ans=$1
 if [[ $2 -gt $ans ]]
-then ans=$b
+then ans=$2
 fi
 if [[ $3 -gt $ans ]]
 then ans=$3
