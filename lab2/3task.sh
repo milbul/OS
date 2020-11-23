@@ -1,3 +1,5 @@
 #!/bin/bash
 
-ps -eo lstart,pid | awk 'NR>1' | sort -k1 | tail -1 | awk '{print $6}'
+ps -eo start,pid,cmd > temp
+cat temp | awk 'NR>1' | tail -3 | head -1 |  awk '{print $2}'
+rm temp
