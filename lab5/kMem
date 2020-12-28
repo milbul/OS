@@ -1,0 +1,10 @@
+#!/bin/bash
+
+K=$2
+N=$1
+
+while [[ $K -gt 0 ]]; do
+	./newMem $N &
+	((K--))
+	sleep 1
+done
