@@ -1,0 +1,15 @@
+1
+md LAB6
+systeminfo > sysinfo.txt
+wmic logicaldisk get name, size, freespace > disk.txt
+
+2
+mkdir TEST
+copy C:\LAB6 C:\LAB6\TEST
+cd TEST
+
+3
+type C:\LAB6\TEST\*.txt >> type.txt
+
+4
+for %i in (*) do if %i NEQ type.txt del %i

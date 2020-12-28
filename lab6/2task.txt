@@ -1,0 +1,18 @@
+1
+echo %computername%
+net share temp=C:\%computername%
+
+2
+copy.cmd:
+xcopy /z C:\LAB6\copy.txt C:\%computername%\temp\copy.txt
+
+3
+schtasks /create /SC MINUTE /TN copy /TR copy.cmd
+
+4
+schtasks /query | find "copy"
+schtasks /delete /TN "copy"
+
+5
+fc C:\LAB6\copy.txt C:\%computername%\temp\copy.txt
+./copy.cmd

@@ -1,0 +1,8 @@
+1
+net start > netStart.txt
+
+2
+net stop dnscache
+timeout /t 15 & net start > netStartUpdate.txt
+fc netStart.txt netStartUpdate.txt /l /a > comp.txt
+net start dnscache
